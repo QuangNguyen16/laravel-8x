@@ -150,6 +150,7 @@ class CartComponent extends Component
                 $this->calculateDiscounts();
             }
         }
+        $this->setAmountForCheckout();
         return view('livewire.cart-component')->layout("layouts.base");
     }
 }

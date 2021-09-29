@@ -7,6 +7,7 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCouponComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
+use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
 use App\Http\Livewire\Admin\FormComponent;
 use App\Http\Livewire\Admin\FormManufacturesComponent;
@@ -98,6 +99,8 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('/admin/coupon/add', AdminAddCouponComponent::class)->name('admin.addcoupon');
     //edit coupon
     Route::get('/admin/coupon/edit/{coupon_id}', AdminEditCouponComponent::class)->name('admin.editcoupon');
+    //order
+    Route::get('/admin/orders', AdminOrderComponent::class)->name('admin.orders');
 });
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
